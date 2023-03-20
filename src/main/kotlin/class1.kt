@@ -18,6 +18,7 @@ fun buildAquarium() {
     // with constructor and property initialization
     val aquarium3 = Aquarium(height = 35, length = 110)
     aquarium3.printSize()
+    println(aquarium3.volume)  // 속성의 getter 호출
 
     // init block. one or more
     // secondary constructor
@@ -50,7 +51,9 @@ class AquariumWithConstructor(length: Int = 100, width: Int = 20, height: Int = 
     }
 }
 
+// primary constructor: class name constructor (parameter)
 class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40) {
+    // 속성과 getter and setter. getter, setter를 생략하면 컴파일러가 기본으로 생성한다.
     var volume: Int
         get() {
             return width * height * length / 1000
@@ -63,6 +66,7 @@ class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
         println("aquarium initializing")
     }
 
+    // secondary constructor: constructor(parameter): initialize primary constructor
     constructor(numberOfFish: Int) : this() {
         // 2,000 cm^3 per fish + extra room so water doesn't spill
         val tank = numberOfFish * 2000 * 1.1

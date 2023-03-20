@@ -16,6 +16,7 @@ fun buildAquarium2() {
     aquarium6.printSize()
 }
 
+// kotlin은 모든 클래스가 최종. 확장하기 위해서 open
 open class Aquarium2 (open var length: Int = 100, open var width: Int = 20, open var height: Int = 40) {
     open var volume: Int
         get() = width * height * length / 1000
