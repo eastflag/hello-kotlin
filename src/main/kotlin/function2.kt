@@ -9,9 +9,13 @@ fun main() {
     val eager = decorations.filter { it [0] == 'p' }
     println("eager: $eager")
 
+    // sequence makes lazy
     // lazy, will wait until asked to evaluate
     val filtered = decorations.asSequence().filter { it[0] == 'p' }
     println("filtered: $filtered")
+    // force evaluation of the lazy list
+    val newList = filtered.toList()
+    println("new list: $newList")
 
     val lazyMap = decorations.asSequence().map {
         println("access: $it")
@@ -22,4 +26,11 @@ fun main() {
     println("first: ${lazyMap.first()}")
     println("-----")
     println("all: ${lazyMap.toList()}")
+
+    val lazyMap2 = decorations.asSequence().filter {it[0] == 'p'}.map {
+        println("access: $it")
+        it
+    }
+    println("-----")
+    println("filtered: ${lazyMap2.toList()}")
 }
