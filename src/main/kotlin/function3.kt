@@ -19,6 +19,7 @@ fun main() {
     println(updateDirty(15, ::increaseDirty))
 
     // last parameter call syntax. if lambda is parameter, you can use {} not ()
+    // trailing lambda expression
     dirtyLevel = updateDirty(dirtyLevel) { dirtyLevel -> dirtyLevel + 23}
     println(dirtyLevel)
 }
