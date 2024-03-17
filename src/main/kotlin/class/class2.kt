@@ -1,8 +1,13 @@
-import java.lang.Math.PI
-
 /*
     https://developer.android.com/codelabs/kotlin-bootcamp-classes#4
+    상속의 수퍼 클래스가 되기 위해서는 class 앞에 open을 추가
+    서브 클래스는 : superClass() 형식으로 수퍼클래스의 생성자를 호출해야 한다.
+    오버라이딩과:
+      수퍼클래스에 선언된 메서드, 속성과 동일한 이름을 서브클래스에서 사용할수 없다.
+      사용하기 위해서는 수퍼클래스에는 open, 서브클래스에는 override를 붙인다.
  */
+
+import java.lang.Math.PI
 
 fun main(args: Array<String>) {
 //    buildAquarium2()
