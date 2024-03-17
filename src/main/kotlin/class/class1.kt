@@ -62,12 +62,14 @@ class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
             height = (value * 1000) / (width * length)
         }
 
+    // 인스턴스 호출시에 수행되는 초기화 메서드
     init {
         println("aquarium initializing")
     }
 
     // secondary constructor: constructor(parameter): initialize primary constructor
     constructor(numberOfFish: Int) : this() {
+        println("second constructor initializing")
         // 2,000 cm^3 per fish + extra room so water doesn't spill
         val tank = numberOfFish * 2000 * 1.1
 
