@@ -1,5 +1,10 @@
 /*
     https://developer.android.com/codelabs/kotlin-bootcamp-classes#3
+    primary 생성자: 변수 초기화 및 init()을 호출하여 로직도 초기화
+    secondary 생성자: 먼저 this()로 primary 생성자를 초기화를 한다.
+    속성: get, set을 정의한다. var a; 라고 정의한다면
+    xxx.a 를 하게 되면 get 호출
+    var x = a 하게 되면 set 호출
  */
 
 fun main(args: Array<String>) {
@@ -19,6 +24,7 @@ fun buildAquarium() {
     val aquarium3 = Aquarium(height = 35, length = 110)
     aquarium3.printSize()
     println(aquarium3.volume)  // 속성의 getter 호출
+    aquarium3.volume = 11
 
     // init block. one or more
     // secondary constructor
@@ -56,9 +62,11 @@ class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
     // 속성과 getter and setter. getter, setter를 생략하면 컴파일러가 기본으로 생성한다.
     var volume: Int
         get() {
+            println("get is called")
             return width * height * length / 1000
         }
         set(value) {
+            println("set is called")
             height = (value * 1000) / (width * length)
         }
 
