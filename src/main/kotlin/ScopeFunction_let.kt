@@ -3,7 +3,7 @@
 fun main(args: Array<String>) {
     // fun <T, R> T.let(block: (T) -> R): R
 
-    val person = Person("", 0)
+    val person = Person()
     val resultIt = person.let {
         it.name = "James"
         it.age = 56
@@ -32,5 +32,3 @@ fun main(args: Array<String>) {
     val nameStr = person?.let { it.name } ?: "Defalut name"
     println(nameStr)
 }
-
-data class Person(var name: String, var age: Int)
