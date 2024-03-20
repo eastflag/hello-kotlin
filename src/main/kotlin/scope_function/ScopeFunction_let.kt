@@ -1,4 +1,4 @@
-// https://blog.yena.io/studynote/2020/04/15/Kotlin-Scope-Functions.html
+package scope_function// https://blog.yena.io/studynote/2020/04/15/Kotlin-Scope-Functions.html
 
 fun main(args: Array<String>) {
     // fun <T, R> T.let(block: (T) -> R): R

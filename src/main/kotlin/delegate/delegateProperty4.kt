@@ -1,3 +1,5 @@
+package delegate
+
 import kotlin.properties.Delegates
 
 class Home4(tv: String, roomNum: Int) {

@@ -1,4 +1,4 @@
-// 출처: https://programmmingphil.tistory.com/6 [원해성개발블로그:티스토리]
+package delegate// 출처: https://programmmingphil.tistory.com/6 [원해성개발블로그:티스토리]
 
 class Home3(_tv: String) {
     var tv: String = _tv
