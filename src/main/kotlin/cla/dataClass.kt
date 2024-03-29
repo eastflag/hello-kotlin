@@ -7,7 +7,7 @@
     equals(), toString(), hashCode()에 Override 구현 시 구현 함수를 사용합니다.
  */
 
-package `class`
+package cla
 
 fun main(args: Array<String>) {
     val user1 = User("Kenneth", "https://store.image/profile_1", 30)
