@@ -2,10 +2,14 @@
 범위 지정 함수는 특정 객체에 대한 작업을 블록 안에 넣어 실핼할 수 있도록 하는 함수
 블록은 특정 객체에 대해 할 작업의 범위가 되며 따라서 버무이 지정 함수라 부른다
 1. apply
-public inline fun <T> T apply(block:T.() -> Unit): T
+  public inline fun <T> T apply(block:T.() -> Unit): T
+  this로 접근
+  수신객체 리턴
 2. run
 3. with
 4. let
+  it으로 접근
+  block 마지막줄 리턴
 5. also
 public inline fun <T> T also(block: (T -> Unit): T
 
