@@ -20,7 +20,9 @@ class Home1(private val _tv: String, private val _roomNum: Int) {
 
 fun main() {
     val home = Home1("삼성", 3)
-    home.tv
+    // get 호출
+    println(home.tv)
+    // set 호출
     home.tv = "LG"
     home.roomNum
 }
