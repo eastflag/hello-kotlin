@@ -5,19 +5,19 @@ package obj
 // class 없이 인스턴스를 만들때 사용
 
 fun main() {
-    println(Counter.count)
+    println(CounterObject.count)
 
-    Counter.countUp()
-    Counter.countUp()
+    CounterObject.countUp()
+    CounterObject.countUp()
 
-    println(Counter.count)
+    println(CounterObject.count)
 
-    Counter.clear()
+    CounterObject.clear()
 
-    println(Counter.count)
+    println(CounterObject.count)
 }
 
-object Counter {
+object CounterObject {
     var count = 0
 
     fun countUp() {
