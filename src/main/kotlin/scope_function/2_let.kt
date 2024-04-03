@@ -9,6 +9,7 @@ fun main(args: Array<String>) {
         it.age = 56
         it // (T)->R 부분에서의 R에 해당하는 반환값.
     }
+    println("person is: " + person)
 
     val resultStr = person.let {
         it.name = "Steve"
