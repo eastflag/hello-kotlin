@@ -1,4 +1,4 @@
-/*
+package basic/*
     https://developer.android.com/codelabs/kotlin-bootcamp-functions#5
  */
 

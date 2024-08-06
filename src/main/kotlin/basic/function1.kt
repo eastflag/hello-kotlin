@@ -1,17 +1,17 @@
-/*
+package basic/*
     https://developer.android.com/codelabs/kotlin-bootcamp-functions#4
 */
 import java.util.*
 
 fun main() {
+    feedTheFish()
+
     swim()   // uses default speed
     swim("slow")   // positional argument
     swim(speed="turtle-like")   // named parameter
 
     shouldChangeWater("Monday") // required parameter
     shouldChangeWater2("Sunday") // compact function
-
-    feedTheFish()
 }
 
 fun swim(speed: String = "fast") {
